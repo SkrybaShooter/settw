@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Simulator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Trading Simulator</h1>
+  </header>
+  <div class="container">
+    <section class="portfolio">
+      <h2>Your Portfolio</h2>
+      <p><strong>Cash:</strong> $<span id="cash">10000</span></p>
+      <p><strong>Portfolio Value:</strong> $<span id="portfolioValue">10000</span></p>
+      <p><strong>Profit/Loss:</strong> $<span id="profit">0</span></p>
+      <button id="resetBtn">RESET</button>
+    </section>
+    <section class="market">
+      <h2>Market Prices</h2>
+      <div class="cards">
+        <div class="card" id="card-sigma">
+          <h3>Dow Jones</h3>
+          <p>Price: $<span class="price" data-symbol="sigma">-</span></p>
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" class="qty" data-symbol="sigma">
+          </label>
+          <br>
+          <button class="buyBtn" data-symbol="sigma">BUY</button>
+          <button class="sellBtn" data-symbol="sigma">SELL</button>
+          <button class="sellAllBtn" data-symbol="sigma">SELL ALL</button>
+          <div class="error" id="error-sigma"></div>
+          <p class="owned" data-symbol="sigma">Owned: 0</p>
+          <canvas id="chart-sigma" width="300" height="200"></canvas>
+        </div>
+        <div class="card" id="card-npc">
+          <h3>Nvidia</h3>
+          <p>Price: $<span class="price" data-symbol="npc">-</span></p>
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" class="qty" data-symbol="npc">
+          </label>
+          <br>
+          <button class="buyBtn" data-symbol="npc">BUY</button>
+          <button class="sellBtn" data-symbol="npc">SELL</button>
+          <button class="sellAllBtn" data-symbol="npc">SELL ALL</button>
+          <div class="error" id="error-npc"></div>
+          <p class="owned" data-symbol="npc">Owned: 0</p>
+          <canvas id="chart-npc" width="300" height="200"></canvas>
+        </div>
+        <div class="card" id="card-cringe">
+          <h3>NASDAQ</h3>
+          <p>Price: $<span class="price" data-symbol="cringe">-</span></p>
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" class="qty" data-symbol="cringe">
+          </label>
+          <br>
+          <button class="buyBtn" data-symbol="cringe">BUY</button>
+          <button class="sellBtn" data-symbol="cringe">SELL</button>
+          <button class="sellAllBtn" data-symbol="cringe">SELL ALL</button>
+          <div class="error" id="error-cringe"></div>
+          <p class="owned" data-symbol="cringe">Owned: 0</p>
+          <canvas id="chart-cringe" width="300" height="200"></canvas>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio-chart">
+      <h2>Portfolio History</h2>
+      <canvas id="portfolioChart" width="600" height="200"></canvas>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  header {
+    padding: 1rem;
+    text-align: center;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+  }
+  
+  .container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .portfolio, .market {
+    margin-bottom: 2rem;
+  }
+  
+  .portfolio h2, .market h2 {
+    margin-top: 0;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card {
+    flex: 1;
+    min-width: 280px;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+  }
+  
+  button {
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    padding: 0.3rem;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #e0e0e0;
+  }
+  
+  canvas {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  
+  .error {
+    color: #ff4c4c;
+    margin-top: 0.5rem;
+  }
+  
+  .owned {
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 0.9em;
+  }
+  
